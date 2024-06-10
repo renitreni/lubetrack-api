@@ -45,5 +45,11 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+        return $this->hasMany(Fleet::class);
+    }
+
+    public function fleets()
+    {
+        return $this->hasMany(Fleet::class);
     }
 }
