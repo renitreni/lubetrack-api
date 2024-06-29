@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 abstract class Controller
 {
-    public function ok($json = [], $code = 200)
+    public function ok($json = ['message' => 'success'], $code = 200)
     {
         return response()->json($json, $code);
     }
